@@ -50,6 +50,13 @@ const userSchema = new mongoose.Schema({
         type: String, 
         default: "", // Default value is an empty string, meaning no links initially
     },
+    likedPosts: [
+        {
+            type: mongoose.Schema.Types.ObjectId, // Reference to another document in the database
+            ref: "Post", // Reference to the Post model meaning 
+            default: [], // Default value is an empty array, meaning no liked posts initially
+        }
+    ],
 }, { timestamps: true }); // Define a schema for the User model with timestamps
 
 const User = mongoose.model("User", userSchema); // Create a User model based on the userSchema
