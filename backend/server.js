@@ -4,9 +4,9 @@ import connectMongoDB from "./db/connectMongoDB.js";
 import cookieParser from "cookie-parser"; // Import cookie-parser middleware
 import { v2 as cloudinary } from "cloudinary"; // Import cloudinary for image uploading
 
-import authRoutes from "./routes/auth.routes.js"; // Import the auth routes
-import userRoutes from "./routes/user.routes.js"; // Import the user routes
-import postRoutes from "./routes/posts.routes.js"; // Import the post routes
+import authRoutes from "./routes/auth.route.js"; // Import the auth routes
+import userRoutes from "./routes/user.route.js"; // Import the user routes
+import postRoutes from "./routes/posts.route.js"; // Import the post routes
 
 dotenv.config(); // Load environment variables from .env file
 
