@@ -7,6 +7,7 @@ import { v2 as cloudinary } from "cloudinary"; // Import cloudinary for image up
 import authRoutes from "./routes/auth.route.js"; // Import the auth routes
 import userRoutes from "./routes/user.route.js"; // Import the user routes
 import postRoutes from "./routes/posts.route.js"; // Import the post routes
+import notificationRoutes from "./routes/notification.route.js"; // Import the notification routes
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -27,6 +28,7 @@ app.use(cookieParser()); // Use cookie-parser middleware to parse cookies
 app.use("/api/auth", authRoutes); // Use the auth routes for the /api/auth endpoint
 app.use("/api/user", userRoutes);
 app.use("/api/posts", postRoutes); // Use the post routes for the /api/posts endpoint
+app.use("/api/notifications", notificationRoutes); // Use the notification routes for the /api/notifications endpoint
 
 app.listen (PORT, () => {
     console.log(`Server is running on port ${PORT}`); // Log the server port to the console
